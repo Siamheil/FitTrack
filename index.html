@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FitTrack – Train Smarter</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grid-bg"></div>
+<div class="glow-orb glow-1"></div>
+<div class="glow-orb glow-2"></div>
+
+<nav class="navbar" id="mainNav">
+  <div class="nav-logo" onclick="scrollToTop()">
+    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+    FITTRACK
+  </div>
+  <div class="nav-links">
+    <a class="nav-link" onclick="scrollTo('howSection')">How it Works</a>
+    <a class="nav-link" onclick="scrollTo('featuresSection')">Features</a>
+    <a class="nav-link" onclick="scrollTo('bmiSection')">BMI Calc</a>
+  </div>
+  <div class="nav-actions">
+    <button class="btn-outline" onclick="showAuth('login')">Log In</button>
+    <button class="btn-orange" onclick="showAuth('signup')">Get Started</button>
+  </div>
+</nav>
+
+<div id="landingPage">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-left">
+      <div class="hero-badge">🏆 Your Personal Fitness Companion</div>
+      <h1 class="hero-title">
+        <span class="line1">TRAIN</span>
+        <span class="line2">SMARTER.</span>
+        <span class="line3">NOT HARDER.</span>
+      </h1>
+      <p class="hero-desc">Track every rep, every calorie, every breakthrough. FitTrack gives you the data to crush your goals and the insights to keep going.</p>
+      <div class="hero-btns">
+        <button class="btn-hero-primary" onclick="showAuth('signup')">Start Free Today →</button>
+        <button class="btn-hero-secondary" onclick="showAuth('login')">Sign In</button>
+      </div>
+      <div class="hero-stats">
+        <div><div class="hero-stat-val">10K+</div><div class="hero-stat-lbl">Active Users</div></div>
+        <div><div class="hero-stat-val">2M+</div><div class="hero-stat-lbl">Workouts Logged</div></div>
+        <div><div class="hero-stat-val">98%</div><div class="hero-stat-lbl">Stay on Track</div></div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="dashboard-mockup">
+        <div class="mockup-bar">
+          <div class="mockup-dot" style="background:#ef4444"></div>
+          <div class="mockup-dot" style="background:#f59e0b"></div>
+          <div class="mockup-dot" style="background:#22c55e"></div>
+          <span class="mockup-title">FitTrack Dashboard</span>
+        </div>
+        <div class="mockup-body">
+          <div class="mockup-stats">
+            <div class="mockup-stat"><div class="mockup-stat-icon">🔥</div><div class="mockup-stat-val">2840</div><div class="mockup-stat-lbl">Calories Burned</div></div>
+            <div class="mockup-stat"><div class="mockup-stat-icon">⏱️</div><div class="mockup-stat-val">4H 20M</div><div class="mockup-stat-lbl">Total Time</div></div>
+            <div class="mockup-stat"><div class="mockup-stat-icon">💪</div><div class="mockup-stat-val">12</div><div class="mockup-stat-lbl">Workouts</div></div>
+          </div>
+          <div class="mockup-chart-title">Weekly Progress</div>
+          <div class="mockup-bars">
+            <div class="mockup-bar-wrap"><div class="mockup-bar-fill" style="height:45%"></div><div class="mockup-bar-lbl">M</div></div>
+            <div class="mockup-bar-wrap"><div class="mockup-bar-fill" style="height:70%"></div><div class="mockup-bar-lbl">T</div></div>
+            <div class="mockup-bar-wrap"><div class="mockup-bar-fill" style="height:30%"></div><div class="mockup-bar-lbl">W</div></div>
+            <div class="mockup-bar-wrap"><div class="mockup-bar-fill" style="height:85%"></div><div class="mockup-bar-lbl">T</div></div>
+            <div class="mockup-bar-wrap"><div class="mockup-bar-fill active" style="height:60%"></div><div class="mockup-bar-lbl">F</div></div>
+            <div class="mockup-bar-wrap"><div class="mockup-bar-fill" style="height:20%"></div><div class="mockup-bar-lbl">S</div></div>
+            <div class="mockup-bar-wrap"><div class="mockup-bar-fill" style="height:50%"></div><div class="mockup-bar-lbl">S</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+  <section class="section" id="howSection">
+    <div class="section-header">
+      <div class="section-tag">How it Works</div>
+      <h2 class="section-title">THREE STEPS TO<br><span style="color:var(--orange)">YOUR BEST SELF</span></h2>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">01</div>
+        <div class="step-title">Create Your Profile</div>
+        <p class="step-desc">Sign up in seconds. Add your weight, height, and fitness goal so FitTrack can personalize your experience.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">02</div>
+        <div class="step-title">Log Your Workouts</div>
+        <p class="step-desc">Record any workout — strength, cardio, HIIT, yoga. Track duration, calories, sets and everything in between.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">03</div>
+        <div class="step-title">Analyze & Improve</div>
+        <p class="step-desc">See your weekly charts, training split, streaks and milestones. Let the data drive your next breakthrough.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+  <section class="section" id="featuresSection">
+    <div class="section-header">
+      <div class="section-tag">Features</div>
+      <h2 class="section-title">EVERYTHING YOU NEED<br><span style="color:var(--orange)">TO CRUSH IT</span></h2>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card"><div class="feature-icon">📊</div><div class="feature-title">Smart Analytics</div><p class="feature-desc">Weekly charts, training splits, calorie trends and performance insights all in one place.</p></div>
+      <div class="feature-card"><div class="feature-icon">🎯</div><div class="feature-title">Goal Tracking</div><p class="feature-desc">Set weekly targets for workouts, calories and active minutes. Watch your progress bars fill up.</p></div>
+      <div class="feature-card"><div class="feature-icon">🏆</div><div class="feature-title">Milestones</div><p class="feature-desc">Earn badges for your first workout, 10 sessions, 50 sessions and beyond. Stay motivated.</p></div>
+      <div class="feature-card"><div class="feature-icon">⚖️</div><div class="feature-title">BMI Calculator</div><p class="feature-desc">Instant BMI calculation with visual meter and health status. Pre-filled from your profile.</p></div>
+      <div class="feature-card"><div class="feature-icon">🔥</div><div class="feature-title">Streak Counter</div><p class="feature-desc">Build daily workout habits with a streak tracker that keeps you accountable every single day.</p></div>
+      <div class="feature-card"><div class="feature-icon">💡</div><div class="feature-title">Expert Tips</div><p class="feature-desc">Science-backed fitness and nutrition tips tailored to your goal — hydration, sleep, protein timing and more.</p></div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+  <section class="section" id="bmiSection">
+    <div class="section-header">
+      <div class="section-tag">BMI Calculator</div>
+      <h2 class="section-title">KNOW YOUR<br><span style="color:var(--orange)">NUMBERS</span></h2>
+    </div>
+    <div class="bmi-section">
+      <div>
+        <div class="bmi-form-grid">
+          <div class="form-group"><label class="form-label">Weight (kg)</label><input type="number" id="landBmiW" class="form-input" placeholder="70" min="30" max="250"></div>
+          <div class="form-group"><label class="form-label">Height (cm)</label><input type="number" id="landBmiH" class="form-input" placeholder="170" min="100" max="250"></div>
+        </div>
+        <button class="btn-orange" style="width:100%;padding:14px;font-size:16px;border-radius:10px;margin-top:4px" onclick="calcLandBMI()">Calculate BMI</button>
+      </div>
+      <div class="bmi-result-box" id="landBmiResult">
+        <div style="font-size:14px;color:var(--txt2);padding:20px 0">Enter your measurements above to see your BMI</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+  <footer class="footer">
+    <div class="footer-logo">
+      <svg width="18" height="18" fill="#f97316" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+      FITTRACK
+    </div>
+    <div class="footer-copy">© 2025 FitTrack. Train smarter, not harder.</div>
+  </footer>
+</div>
+
+<div id="loginPage" class="hidden">
+  <div class="auth-page">
+    <div class="auth-card">
+      <div class="auth-logo">
+        <svg width="22" height="22" fill="#f97316" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        FITTRACK
+      </div>
+      <h2 class="auth-title">Welcome back</h2>
+      <p class="auth-sub">Sign in to continue your fitness journey</p>
+      <div id="loginAlert" class="alert alert-error hidden"></div>
+      <div class="form-group">
+        <label class="form-label">Email Address</label>
+        <input type="email" id="loginEmail" class="form-input" placeholder="you@example.com" onkeydown="if(event.key==='Enter')handleLogin()">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Password</label>
+        <input type="password" id="loginPwd" class="form-input" placeholder="Enter your password" onkeydown="if(event.key==='Enter')handleLogin()">
+      </div>
+      <button class="btn-full" onclick="handleLogin()">Sign In</button>
+      <div class="auth-switch">Don't have an account? <a onclick="showAuth('signup')">Create one →</a></div>
+      <div class="auth-switch" style="margin-top:10px"><a onclick="showLanding()" style="color:var(--txt2);font-weight:400">← Back to home</a></div>
+    </div>
+  </div>
+</div>
+
+<div id="signupPage" class="hidden">
+  <div class="auth-page">
+    <div class="auth-card">
+      <div class="auth-logo">
+        <svg width="22" height="22" fill="#f97316" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        FITTRACK
+      </div>
+      <h2 class="auth-title">Start your journey</h2>
+      <p class="auth-sub">Create your free FitTrack account</p>
+      <div id="signupAlert" class="alert alert-error hidden"></div>
+      <div id="signupSuccess" class="alert alert-success hidden"></div>
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">First Name</label><input type="text" id="sigFirst" class="form-input" placeholder="Alex"></div>
+        <div class="form-group"><label class="form-label">Last Name</label><input type="text" id="sigLast" class="form-input" placeholder="Smith"></div>
+      </div>
+      <div class="form-group"><label class="form-label">Email Address</label><input type="email" id="sigEmail" class="form-input" placeholder="you@example.com"></div>
+      <div class="form-group"><label class="form-label">Password (min 6 chars)</label><input type="password" id="sigPwd" class="form-input" placeholder="Create a password"></div>
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">Weight (kg)</label><input type="number" id="sigWeight" class="form-input" placeholder="70" min="30" max="300"></div>
+        <div class="form-group"><label class="form-label">Height (cm)</label><input type="number" id="sigHeight" class="form-input" placeholder="170" min="100" max="250"></div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Fitness Goal</label>
+        <select id="sigGoal" class="form-select">
+          <option value="weight_loss">Weight Loss</option>
+          <option value="muscle_gain">Muscle Gain</option>
+          <option value="endurance">Endurance</option>
+          <option value="flexibility">Flexibility & Mobility</option>
+          <option value="general">General Fitness</option>
+        </select>
+      </div>
+      <button class="btn-full" onclick="handleSignup()">Create Account →</button>
+      <div class="auth-switch">Already have an account? <a onclick="showAuth('login')">Sign in</a></div>
+      <div class="auth-switch" style="margin-top:10px"><a onclick="showLanding()" style="color:var(--txt2);font-weight:400">← Back to home</a></div>
+    </div>
+  </div>
+</div>
+
+<div id="appPage">
+  <div class="app-layout">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <svg width="18" height="18" fill="#f97316" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        FITTRACK
+      </div>
+      <div class="nav-section-label" style="margin-bottom:8px">Menu</div>
+      <button class="nav-btn active" id="nb-dashboard" onclick="setDashPage('dashboard',this)"><span class="nav-icon">⚡</span>Dashboard</button>
+      <button class="nav-btn" id="nb-workouts" onclick="setDashPage('workouts',this)"><span class="nav-icon">💪</span>Workouts</button>
+      <button class="nav-btn" id="nb-analytics" onclick="setDashPage('analytics',this)"><span class="nav-icon">📊</span>Analytics</button>
+      <button class="nav-btn" id="nb-goals" onclick="setDashPage('goals',this)"><span class="nav-icon">🎯</span>Goals</button>
+      <button class="nav-btn" id="nb-tips" onclick="setDashPage('tips',this)"><span class="nav-icon">💡</span>Tips</button>
+      <button class="nav-btn" id="nb-bmi" onclick="setDashPage('bmi',this)"><span class="nav-icon">⚖️</span>BMI Calculator</button>
+      <div class="sidebar-spacer"></div>
+      <div class="user-box">
+        <div class="user-row">
+          <div class="user-avi" id="sideAvi">A</div>
+          <div>
+            <div class="user-name" id="sideName">User</div>
+            <div class="user-email" id="sideEmail">—</div>
+          </div>
+        </div>
+        <button class="logout-btn" onclick="handleLogout()">Sign Out</button>
+      </div>
+    </aside>
+
+    <main class="app-main">
+
+      <div class="dash-page active" id="dp-dashboard">
+        <div class="page-title" id="dashGreeting">DASHBOARD</div>
+        <div class="page-sub" id="dashSub">Here's your fitness overview</div>
+
+        <div class="stats-row">
+          <div class="stat-card"><div class="stat-icon">🔥</div><div class="stat-val" id="dsCals">0</div><div class="stat-lbl">Calories Burned</div><div class="stat-trend" id="dsCalsT">Total all time</div></div>
+          <div class="stat-card"><div class="stat-icon">⏱️</div><div class="stat-val" id="dsMins">0</div><div class="stat-lbl">Minutes Active</div><div class="stat-trend" id="dsMinsT">This week</div></div>
+          <div class="stat-card"><div class="stat-icon">💪</div><div class="stat-val" id="dsCount">0</div><div class="stat-lbl">Workouts Done</div><div class="stat-trend" id="dsCountT">All time</div></div>
+          <div class="stat-card"><div class="stat-icon">🔥</div><div class="stat-val" id="dsStreak">0</div><div class="stat-lbl">Day Streak</div><div class="stat-trend up" id="dsStreakT">Keep it up!</div></div>
+        </div>
+
+        <div class="two-col">
+          <div class="card">
+            <div class="card-title">📈 Weekly Calories</div>
+            <div class="bar-chart" id="weekChart">
+              <div class="bc-wrap"><div class="bc-bar" style="height:20%"></div><div class="bc-lbl">Mon</div></div>
+              <div class="bc-wrap"><div class="bc-bar" style="height:20%"></div><div class="bc-lbl">Tue</div></div>
+              <div class="bc-wrap"><div class="bc-bar" style="height:20%"></div><div class="bc-lbl">Wed</div></div>
+              <div class="bc-wrap"><div class="bc-bar" style="height:20%"></div><div class="bc-lbl">Thu</div></div>
+              <div class="bc-wrap"><div class="bc-bar" style="height:20%"></div><div class="bc-lbl">Fri</div></div>
+              <div class="bc-wrap"><div class="bc-bar" style="height:20%"></div><div class="bc-lbl">Sat</div></div>
+              <div class="bc-wrap"><div class="bc-bar lit" style="height:20%"></div><div class="bc-lbl">Sun</div></div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-title">🍩 Type Breakdown</div>
+            <div class="ring-row">
+              <div class="ring-svg-wrap">
+                <svg width="110" height="110" viewBox="0 0 110 110" style="transform:rotate(-90deg)">
+                  <circle cx="55" cy="55" r="42" fill="none" stroke="#1a1a1a" stroke-width="14"/>
+                  <circle id="rStr" cx="55" cy="55" r="42" fill="none" stroke="#f97316" stroke-width="14" stroke-dasharray="264" stroke-dashoffset="264" stroke-linecap="round"/>
+                  <circle id="rCar" cx="55" cy="55" r="42" fill="none" stroke="#60a5fa" stroke-width="14" stroke-dasharray="264" stroke-dashoffset="264" stroke-linecap="round"/>
+                  <circle id="rFlex" cx="55" cy="55" r="42" fill="none" stroke="#c084fc" stroke-width="14" stroke-dasharray="264" stroke-dashoffset="264" stroke-linecap="round"/>
+                  <circle id="rHiit" cx="55" cy="55" r="42" fill="none" stroke="#f87171" stroke-width="14" stroke-dasharray="264" stroke-dashoffset="264" stroke-linecap="round"/>
+                </svg>
+                <div class="ring-center-text">
+                  <div class="ring-total" id="ringTotal">0</div>
+                  <div class="ring-sub">total</div>
+                </div>
+              </div>
+              <div>
+                <div class="legend-item"><div class="legend-dot" style="background:#f97316"></div><span id="legStr">Strength — 0</span></div>
+                <div class="legend-item"><div class="legend-dot" style="background:#60a5fa"></div><span id="legCar">Cardio — 0</span></div>
+                <div class="legend-item"><div class="legend-dot" style="background:#c084fc"></div><span id="legFlex">Flexibility — 0</span></div>
+                <div class="legend-item"><div class="legend-dot" style="background:#f87171"></div><span id="legHiit">HIIT — 0</span></div>
+                <div class="legend-item"><div class="legend-dot" style="background:#4ade80"></div><span id="legYoga">Yoga — 0</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">⚡ Recent Workouts</div>
+          <div id="recentList"><div style="text-align:center;padding:32px;color:var(--txt3);font-size:14px">No workouts yet — head to the Workouts tab to log your first one 💪</div></div>
+        </div>
+      </div>
+
+      <div class="dash-page" id="dp-workouts">
+        <div class="page-title">WORKOUT LOG</div>
+        <div class="page-sub">Track and manage all your training sessions</div>
+
+        <div class="add-form">
+          <div class="card-title" style="margin-bottom:14px">➕ Log New Workout</div>
+          <div class="add-form-grid">
+            <div>
+              <div class="inp-label">Exercise Name</div>
+              <select id="wName" class="sel" onchange="onExerciseNameChange()">
+                <option value="">— Select Exercise —</option>
+                <optgroup label="🏃 Cardio">
+                  <option value="Running">Running</option>
+                  <option value="Jogging">Jogging</option>
+                  <option value="Walking">Walking</option>
+                  <option value="Cycling">Cycling</option>
+                  <option value="Swimming">Swimming</option>
+                  <option value="Rowing">Rowing</option>
+                  <option value="Jump Rope">Jump Rope</option>
+                  <option value="Elliptical">Elliptical Trainer</option>
+                  <option value="Stair Climbing">Stair Climbing</option>
+                  <option value="Aerobics">Aerobics</option>
+                  <option value="Dance">Dance Cardio</option>
+                  <option value="Treadmill">Treadmill</option>
+                  <option value="Speed Walking">Speed Walking</option>
+                </optgroup>
+                <optgroup label="💪 Strength Training">
+                  <option value="Bench Press">Bench Press</option>
+                  <option value="Squats">Squats</option>
+                  <option value="Deadlift">Deadlift</option>
+                  <option value="Pull Ups">Pull Ups / Chin Ups</option>
+                  <option value="Push Ups">Push Ups</option>
+                  <option value="Shoulder Press">Shoulder Press</option>
+                  <option value="Bicep Curls">Bicep Curls</option>
+                  <option value="Tricep Dips">Tricep Dips</option>
+                  <option value="Lat Pulldown">Lat Pulldown</option>
+                  <option value="Leg Press">Leg Press</option>
+                  <option value="Lunges">Lunges</option>
+                  <option value="Plank">Plank</option>
+                  <option value="Dumbbell Training">Dumbbell Training</option>
+                  <option value="Barbell Training">Barbell Training</option>
+                  <option value="Kettlebell">Kettlebell Training</option>
+                  <option value="Resistance Bands">Resistance Bands</option>
+                  <option value="Circuit Training">Circuit Training</option>
+                  <option value="CrossFit">CrossFit</option>
+                  <option value="Functional Training">Functional Training</option>
+                  <option value="Cable Machine">Cable Machine</option>
+                  <option value="Crunches">Crunches / Sit-Ups</option>
+                </optgroup>
+                <optgroup label="⚡ HIIT">
+                  <option value="HIIT">HIIT (General)</option>
+                  <option value="Tabata">Tabata</option>
+                  <option value="Burpees">Burpees</option>
+                  <option value="Box Jumps">Box Jumps</option>
+                  <option value="Mountain Climbers">Mountain Climbers</option>
+                  <option value="Sprint Intervals">Sprint Intervals</option>
+                  <option value="Jump Squats">Jump Squats</option>
+                  <option value="High Knees">High Knees</option>
+                  <option value="Battle Ropes">Battle Ropes</option>
+                </optgroup>
+                <optgroup label="🧘 Flexibility & Mind-Body">
+                  <option value="Yoga">Yoga</option>
+                  <option value="Hot Yoga">Hot Yoga</option>
+                  <option value="Pilates">Pilates</option>
+                  <option value="Stretching">Stretching</option>
+                  <option value="Tai Chi">Tai Chi</option>
+                  <option value="Foam Rolling">Foam Rolling</option>
+                  <option value="Meditation">Meditation + Breathing</option>
+                </optgroup>
+                <optgroup label="⚽ Sports">
+                  <option value="Basketball">Basketball</option>
+                  <option value="Football">Football / Soccer</option>
+                  <option value="Cricket">Cricket</option>
+                  <option value="Tennis">Tennis</option>
+                  <option value="Badminton">Badminton</option>
+                  <option value="Volleyball">Volleyball</option>
+                  <option value="Table Tennis">Table Tennis</option>
+                  <option value="Kabaddi">Kabaddi</option>
+                  <option value="Hockey">Hockey</option>
+                </optgroup>
+                <optgroup label="🥊 Combat Sports">
+                  <option value="Boxing">Boxing</option>
+                  <option value="Martial Arts">Martial Arts / MMA</option>
+                  <option value="Wrestling">Wrestling</option>
+                  <option value="Kickboxing">Kickboxing</option>
+                  <option value="Judo">Judo</option>
+                  <option value="Karate">Karate</option>
+                </optgroup>
+                <optgroup label="🏔️ Outdoor & Adventure">
+                  <option value="Hiking">Hiking</option>
+                  <option value="Rock Climbing">Rock Climbing</option>
+                  <option value="Trekking">Trekking</option>
+                  <option value="Cycling Outdoor">Outdoor Cycling</option>
+                  <option value="Trail Running">Trail Running</option>
+                </optgroup>
+              </select>
+            </div>
+            <div>
+              <div class="inp-label">Type</div>
+              <select id="wType" class="sel" onchange="autoFillCalories()">
+                <optgroup label="🏃 Cardio">
+                  <option value="cardio">Cardio (General)</option>
+                  <option value="running">Running</option>
+                  <option value="jogging">Jogging</option>
+                  <option value="walking">Walking</option>
+                  <option value="cycling">Cycling</option>
+                  <option value="swimming">Swimming</option>
+                  <option value="rowing">Rowing</option>
+                  <option value="jump rope">Jump Rope</option>
+                  <option value="elliptical">Elliptical</option>
+                  <option value="stair climbing">Stair Climbing</option>
+                  <option value="aerobics">Aerobics</option>
+                  <option value="dance">Dance Cardio</option>
+                </optgroup>
+                <optgroup label="💪 Strength Training">
+                  <option value="strength">Strength (General)</option>
+                  <option value="bench press">Bench Press</option>
+                  <option value="squats">Squats</option>
+                  <option value="deadlift">Deadlift</option>
+                  <option value="pull ups">Pull Ups / Chin Ups</option>
+                  <option value="push ups">Push Ups</option>
+                  <option value="dumbbell">Dumbbell Training</option>
+                  <option value="barbell">Barbell Training</option>
+                  <option value="kettlebell">Kettlebell</option>
+                  <option value="resistance bands">Resistance Bands</option>
+                  <option value="circuit training">Circuit Training</option>
+                  <option value="functional training">Functional Training</option>
+                  <option value="crossfit">CrossFit</option>
+                </optgroup>
+                <optgroup label="⚡ HIIT">
+                  <option value="hiit">HIIT (General)</option>
+                  <option value="tabata">Tabata</option>
+                  <option value="burpees">Burpees</option>
+                  <option value="box jumps">Box Jumps</option>
+                  <option value="mountain climbers">Mountain Climbers</option>
+                  <option value="sprint intervals">Sprint Intervals</option>
+                </optgroup>
+                <optgroup label="🧘 Flexibility & Mind-Body">
+                  <option value="yoga">Yoga</option>
+                  <option value="hot yoga">Hot Yoga</option>
+                  <option value="pilates">Pilates</option>
+                  <option value="stretching">Stretching</option>
+                  <option value="flexibility">Flexibility (General)</option>
+                  <option value="tai chi">Tai Chi</option>
+                </optgroup>
+                <optgroup label="⚽ Sports">
+                  <option value="basketball">Basketball</option>
+                  <option value="football">Football / Soccer</option>
+                  <option value="cricket">Cricket</option>
+                  <option value="tennis">Tennis</option>
+                  <option value="badminton">Badminton</option>
+                  <option value="volleyball">Volleyball</option>
+                  <option value="boxing">Boxing</option>
+                  <option value="martial arts">Martial Arts / MMA</option>
+                  <option value="wrestling">Wrestling</option>
+                  <option value="rock climbing">Rock Climbing</option>
+                  <option value="hiking">Hiking</option>
+                </optgroup>
+              </select>
+            </div>
+            <div>
+              <div class="inp-label">Duration (min)</div>
+              <input type="number" id="wDur" class="inp" placeholder="30" min="1" max="600" oninput="autoFillCalories()">
+            </div>
+            <div>
+              <div class="inp-label">Intensity</div>
+              <select id="wIntensity" class="sel" onchange="autoFillCalories()">
+                <option value="low">Low</option>
+                <option value="moderate" selected>Moderate</option>
+                <option value="high">High</option>
+              </select>
+            </div>
+            <div>
+              <div class="inp-label">Calories <span style="font-size:10px;color:var(--txt3)">(auto or override)</span></div>
+              <input type="number" id="wCals" class="inp" placeholder="Auto-calculated 🔥" min="0">
+            </div>
+            <div>
+              <div class="inp-label">&nbsp;</div>
+              <button class="btn-log" onclick="addWorkout()">Log It</button>
+            </div>
+          </div>
+          <div id="calsHint" style="font-size:12px;color:var(--orange);margin-top:6px;min-height:18px;transition:all 0.3s"></div>
+          <div class="add-form-grid2">
+            <div>
+              <div class="inp-label">Sets (optional)</div>
+              <input type="number" id="wSets" class="inp" placeholder="3" min="1">
+            </div>
+            <div>
+              <div class="inp-label">Reps (optional)</div>
+              <input type="number" id="wReps" class="inp" placeholder="10" min="1">
+            </div>
+            <div>
+              <div class="inp-label">Notes (optional)</div>
+              <input type="text" id="wNotes" class="inp" placeholder="Personal best, felt great...">
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">📋 All Workouts</div>
+          <div class="filter-tabs">
+            <button class="ftab active" onclick="filterW('all',this)">All</button>
+            <button class="ftab" onclick="filterW('strength',this)">Strength</button>
+            <button class="ftab" onclick="filterW('cardio',this)">Cardio</button>
+            <button class="ftab" onclick="filterW('hiit',this)">HIIT</button>
+            <button class="ftab" onclick="filterW('flexibility',this)">Flexibility</button>
+            <button class="ftab" onclick="filterW('yoga',this)">Yoga</button>
+          </div>
+          <div id="allWorkouts"><div style="text-align:center;padding:32px;color:var(--txt3);font-size:14px">No workouts logged yet. Add your first one above!</div></div>
+        </div>
+      </div>
+
+      <div class="dash-page" id="dp-analytics">
+        <div class="page-title">ANALYTICS</div>
+        <div class="page-sub">Deep dive into your training data</div>
+        <div class="stats-row">
+          <div class="stat-card"><div class="stat-icon">🔥</div><div class="stat-val" id="aTotalCals">0</div><div class="stat-lbl">Total Calories</div></div>
+          <div class="stat-card"><div class="stat-icon">⏳</div><div class="stat-val" id="aTotalHrs">0</div><div class="stat-lbl">Total Hours</div></div>
+          <div class="stat-card"><div class="stat-icon">📈</div><div class="stat-val" id="aAvgCals">0</div><div class="stat-lbl">Avg Cals/Session</div></div>
+          <div class="stat-card"><div class="stat-icon">🏆</div><div class="stat-val" id="aBest">0</div><div class="stat-lbl">Best Session (cals)</div></div>
+        </div>
+        <div class="card" style="margin-bottom:16px">
+          <div class="card-title">📅 Last 10 Sessions — Calories</div>
+          <div class="bar-chart" style="height:150px" id="analyticsBars"></div>
+        </div>
+        <div class="two-col">
+          <div class="card">
+            <div class="card-title">🏅 Most Trained</div>
+            <div id="topWorkoutDisplay" style="padding:8px 0">
+              <div style="font-family:'Barlow Condensed',sans-serif;font-size:52px;font-weight:900;color:var(--orange);line-height:1" id="topWName">—</div>
+              <div style="color:var(--txt2);font-size:13px;margin-top:4px" id="topWSub">Log more workouts for insights</div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-title">⚡ Training Split</div>
+            <div id="splitBars"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dash-page" id="dp-goals">
+        <div class="page-title">MY GOALS</div>
+        <div class="page-sub">Track progress towards your weekly targets</div>
+        <div class="two-col">
+          <div class="card">
+            <div class="card-title">🎯 Weekly Targets</div>
+            <div class="goal-row">
+              <div class="goal-hdr"><span>Weekly Workouts</span><span class="goal-pct" id="gWPct">0%</span></div>
+              <div style="font-size:12px;color:var(--txt2);margin-bottom:2px"><span id="gWCur">0</span> / 5 sessions</div>
+              <div class="prog-bar"><div class="prog-fill" id="gWFill" style="width:0%"></div></div>
+            </div>
+            <div class="goal-row">
+              <div class="goal-hdr"><span>Calories This Week</span><span class="goal-pct" id="gCPct">0%</span></div>
+              <div style="font-size:12px;color:var(--txt2);margin-bottom:2px"><span id="gCCur">0</span> / 2500 kcal</div>
+              <div class="prog-bar"><div class="prog-fill" id="gCFill" style="width:0%"></div></div>
+            </div>
+            <div class="goal-row">
+              <div class="goal-hdr"><span>Active Minutes</span><span class="goal-pct" id="gMPct">0%</span></div>
+              <div style="font-size:12px;color:var(--txt2);margin-bottom:2px"><span id="gMCur">0</span> / 150 min</div>
+              <div class="prog-bar"><div class="prog-fill" id="gMFill" style="width:0%"></div></div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-title">🏆 Milestones</div>
+            <div id="milestonesBox"></div>
+          </div>
+        </div>
+        <div class="card" style="margin-top:0">
+          <div class="card-title">📋 Your Goal: <span style="color:var(--orange)" id="userGoalLabel">General Fitness</span></div>
+          <p id="goalAdvice" style="color:var(--txt2);font-size:14px;line-height:1.7;margin-top:4px"></p>
+        </div>
+      </div>
+
+      <div class="dash-page" id="dp-tips">
+        <div class="page-title">FITNESS TIPS</div>
+        <div class="page-sub">Science-backed advice to maximise your results</div>
+        <div class="tips-grid">
+          <div class="tip-card"><div class="tip-icon">💧</div><div class="tip-title">Hydration is Key</div><p class="tip-body">Drink at least 8 glasses of water daily. During intense sessions, consume 500–750ml per hour to prevent dehydration and keep performance high.</p></div>
+          <div class="tip-card"><div class="tip-icon">😴</div><div class="tip-title">Sleep for Recovery</div><p class="tip-body">Aim for 7–9 hours of quality sleep. Growth hormone is released during deep sleep — essential for muscle repair and fat metabolism.</p></div>
+          <div class="tip-card"><div class="tip-icon">🥩</div><div class="tip-title">Protein Timing</div><p class="tip-body">Consume 20–40g of protein within 30 minutes post-workout to maximise muscle protein synthesis and speed up recovery.</p></div>
+          <div class="tip-card"><div class="tip-icon">📈</div><div class="tip-title">Progressive Overload</div><p class="tip-body">Increase workout intensity by 5–10% each week. This is the most proven method for continuous strength and fitness improvements.</p></div>
+          <div class="tip-card"><div class="tip-icon">🏃</div><div class="tip-title">Warm Up Properly</div><p class="tip-body">Spend 5–10 minutes on dynamic stretching before every workout. This improves performance by up to 20% and cuts injury risk significantly.</p></div>
+          <div class="tip-card"><div class="tip-icon">🍎</div><div class="tip-title">Pre-Workout Fuel</div><p class="tip-body">Eat complex carbs + protein 1–2 hours before training. Oats with banana, or rice with chicken are ideal pre-workout options.</p></div>
+          <div class="tip-card"><div class="tip-icon">🔄</div><div class="tip-title">Rest Days Matter</div><p class="tip-body">Plan 1–2 rest days per week. Muscles grow during recovery, not training. Active recovery like walking or yoga works perfectly on off-days.</p></div>
+          <div class="tip-card"><div class="tip-icon">🎵</div><div class="tip-title">Music Boosts Output</div><p class="tip-body">Listening to upbeat music at 120–140 BPM can increase workout endurance by up to 15% and significantly reduce perceived exertion.</p></div>
+        </div>
+      </div>
+
+      <div class="dash-page" id="dp-bmi">
+        <div class="page-title">BMI CALCULATOR</div>
+        <div class="page-sub">Know your body mass index and what it means for your health</div>
+        <div class="two-col">
+          <div class="card">
+            <div class="card-title">📏 Your Measurements</div>
+            <div class="form-group"><label class="form-label">Weight (kg)</label><input type="number" id="dashBmiW" class="inp" placeholder="70" min="30" max="300"></div>
+            <div class="form-group"><label class="form-label">Height (cm)</label><input type="number" id="dashBmiH" class="inp" placeholder="170" min="100" max="250"></div>
+            <div class="form-group"><label class="form-label">Age</label><input type="number" id="dashBmiAge" class="inp" placeholder="25" min="1" max="120"></div>
+            <div class="form-group">
+              <label class="form-label">Gender</label>
+              <select id="dashBmiGender" class="sel">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+            </div>
+            <button class="btn-log" style="width:100%;padding:13px;font-size:15px" onclick="calcDashBMI()">Calculate BMI</button>
+          </div>
+          <div class="card" id="dashBmiResults">
+            <div class="card-title">📊 Results</div>
+            <div style="text-align:center;padding:24px;color:var(--txt3);font-size:14px">Enter measurements and click Calculate</div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<div class="toast" id="toast">
+  <span class="toast-icon" id="toastIcon">✅</span>
+  <span id="toastMsg">Done!</span>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
